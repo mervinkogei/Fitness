@@ -1,11 +1,13 @@
 package com.example.fitness.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.fitness.Interface.ItemClickListener;
 import com.example.fitness.Models.Exercise;
 import com.example.fitness.R;
+import com.example.fitness.UI.ViewExercisesActivity;
 
 import java.util.List;
 import java.util.zip.Inflater;
@@ -68,7 +71,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
         holder.setItemClickListener(new ItemClickListener() {
             @Override
             public void OnClick(View view, int position) {
+                //Call the Activity
+//                Toast.makeText(context,"Click to " + exerciseList.get(position).getName(),Toast.LENGTH_SHORT).show();
 
+                Intent intent = new Intent(context, ViewExercisesActivity.class);
+                intent.putExtra("image_id",exerciseList.get(position).getImage_id());
+                intent.putExtra("name",exerciseList.get(position).getName());
+                context.startActivity(intent);
             }
         });
 
