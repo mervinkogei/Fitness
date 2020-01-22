@@ -7,7 +7,7 @@
     android:background="@color/colorPrimary"
     tools:context=".UI.SplashScreen">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/splash"
         android:src="@drawable/yoga_fitness"
         android:layout_centerInParent="true"
