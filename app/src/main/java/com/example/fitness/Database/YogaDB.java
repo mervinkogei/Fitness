@@ -39,7 +39,7 @@ public class YogaDB extends SQLiteAssetHelper {
         db.execSQL(query);
     }
 
-    public List<String> getWorkoutDays() {
+     List<String> getWorkoutDays() {
         SQLiteDatabase db = getReadableDatabase();
         SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
 
@@ -63,4 +63,5 @@ public class YogaDB extends SQLiteAssetHelper {
         String query = String.format("INSERT INTO WorkoutDays(Day) VALUES '%s');",value);
         db.execSQL(query);
     }
+
 }

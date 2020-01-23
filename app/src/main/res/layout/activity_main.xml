@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".UI.MainActivity">
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:src="@drawable/yoga_play"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp"/>
+
     <ImageView
         android:id="@+id/btn_play"
         android:src="@drawable/ic_play_arrow_black_24dp"
