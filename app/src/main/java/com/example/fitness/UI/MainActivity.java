@@ -28,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        btn_calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Calendar.class);
+                startActivity(intent);
+            }
+        });
+
         btn_play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
