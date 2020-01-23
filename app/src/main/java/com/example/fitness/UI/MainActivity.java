@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.fitness.R;
 
@@ -18,12 +19,22 @@ public class MainActivity extends AppCompatActivity {
     Button btn_excercises;
     @BindView(R.id.btn_calendar) Button btn_calendar;
     @BindView(R.id.btn_settings) Button btn_settings;
+    @BindView(R.id.btn_play)
+    ImageView btn_play;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        btn_play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,DailyTrainingActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btn_settings.setOnClickListener(new View.OnClickListener() {
             @Override

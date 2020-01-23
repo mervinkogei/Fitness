@@ -9,8 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UI.SettingsActivity"></activity>
-        <receiver android:name=".AlarmNotifictionReceiver"></receiver>
+        <activity android:name=".UI.Calendar"></activity>
+        <activity android:name=".UI.DailyTrainingActivity" />
+        <activity android:name=".UI.SettingsActivity" />
+
+        <receiver android:name=".AlarmNotifictionReceiver" />
 
         <activity android:name=".UI.MainActivity" />
         <activity android:name=".UI.ViewExercisesActivity" />

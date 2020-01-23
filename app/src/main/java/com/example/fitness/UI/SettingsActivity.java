@@ -52,8 +52,8 @@ public class SettingsActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         yogaDB = new YogaDB(this);
 
-        int mode = yogaDB.getSettingMode();
-        setRadioButton(mode);
+//        int mode = yogaDB.getSettingMode();
+//        setRadioButton(mode);
 
         //Event
      btn_save.setOnClickListener(new View.OnClickListener() {
