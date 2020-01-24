@@ -30,7 +30,9 @@ public class ViewExercisesActivity extends AppCompatActivity {
     @BindView(R.id.detail_image)
     ImageView detail_image;
 
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
+    boolean isRunning = false;
+
+//    FirebaseFirestore db = FirebaseFirestore.getInstance();
 //    YogaDB yogaDB;
 
     @Override
@@ -42,9 +44,7 @@ public class ViewExercisesActivity extends AppCompatActivity {
 
 //        yogaDB = new YogaDB(this);
 
-//        timer.setText(" ");
-
-        boolean isRunning = false;
+        timer.setText(" ");
 
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,13 +52,7 @@ public class ViewExercisesActivity extends AppCompatActivity {
                 if (!isRunning) {
                     btn_start.setText("DONE");
 
-//                    int timeLimit = 0;
-//                    if (yogaDB.getSettingMode() == 0)
-//                        timeLimit = Common.TIME_LIMIT_EASY;
-//                    else if (yogaDB.getSettingMode() == 1)
-//                        timeLimit = Common.TIME_LIMIT_MEDIUM;
-//                    else if (yogaDB.getSettingMode() == 2)
-//                        timeLimit = Common.TIME_LIMIT_HARD;
+//                       timeLimit = Common.TIME_LIMIT_HARD;
 
                     new CountDownTimer(20000, 1000) {
                         @Override
@@ -68,6 +62,12 @@ public class ViewExercisesActivity extends AppCompatActivity {
 
                         @Override
                         public void onFinish() {
+//                    int timeLimit = 0;
+//                    if (yogaDB.getSettingMode() == 0)
+//                    timeLimit = Common.TIME_LIMIT_EASY;
+//                    else if (yogaDB.getSettingMode() == 1)
+//                       timeLimit = Common.TIME_LIMIT_MEDIUM;
+//                    else if (yogaDB.getSettingMode() == 2)
                             // Add ads Here
                             Toast.makeText(ViewExercisesActivity.this, "Finish !!", Toast.LENGTH_SHORT).show();
                             finish();
@@ -77,7 +77,7 @@ public class ViewExercisesActivity extends AppCompatActivity {
                     Toast.makeText(ViewExercisesActivity.this, "Finish !!", Toast.LENGTH_SHORT).show();
                     finish();
                 }
-//                isRunning = !isRunning;
+                isRunning = !isRunning;
             }
         });
         timer.setText(" ");

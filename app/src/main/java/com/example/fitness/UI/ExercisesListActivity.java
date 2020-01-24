@@ -36,16 +36,16 @@ public class ExercisesListActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        exerciseList.add(new Exercise(R.drawable.yoga_arm,"Yoga Arm"));
+        exerciseList.add(new Exercise(R.drawable.yoga_arm,"Yoga Arm Stretch"));
         exerciseList.add(new Exercise(R.drawable.yoga_back,"Yoga Back"));
-        exerciseList.add(new Exercise(R.drawable.yoga_back_pain,"Yoga Arm"));
-        exerciseList.add(new Exercise(R.drawable.yoga_chair,"Yoga Arm"));
-        exerciseList.add(new Exercise(R.drawable.yoga_east_side,"Yoga Arm"));
-        exerciseList.add(new Exercise(R.drawable.yoga_fit,"Yoga Arm"));
-        exerciseList.add(new Exercise(R.drawable.yoga_rest,"Yoga Arm"));
-        exerciseList.add(new Exercise(R.drawable.yoga_side_strech,"Yoga Arm"));
-        exerciseList.add(new Exercise(R.drawable.yoga_tune,"Yoga Arm"));
-        exerciseList.add(new Exercise(R.drawable.yoga_waist,"Yoga Arm"));
+        exerciseList.add(new Exercise(R.drawable.yoga_back_pain,"Yoga Back Stretch"));
+        exerciseList.add(new Exercise(R.drawable.yoga_chair,"Yoga Legs Uplift"));
+        exerciseList.add(new Exercise(R.drawable.yoga_east_side,"Yoga Side Lie"));
+        exerciseList.add(new Exercise(R.drawable.yoga_fit,"Yoga Body fit"));
+        exerciseList.add(new Exercise(R.drawable.yoga_rest,"Yoga Rest"));
+        exerciseList.add(new Exercise(R.drawable.yoga_side_strech,"Yoga Side Swing"));
+        exerciseList.add(new Exercise(R.drawable.yoga_tune,"Yoga Body tune"));
+        exerciseList.add(new Exercise(R.drawable.yoga_waist,"Yoga Waist Stretch"));
 
 
     }

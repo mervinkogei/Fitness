@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/login_image"
+        android:src="@drawable/yoga_app_logo"
+        android:layout_width="150dp"
+        android:layout_height="200dp"/>
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -15,19 +22,6 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/linearLayout">
 
-        <EditText
-            android:id="@+id/nameEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:hint="Name"
-            android:nextFocusDown="@+id/passwordEditText"
-            android:backgroundTint="@color/colorWhite"
-            android:padding="10dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="@color/colorAccent"
-            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/emailEditText"
@@ -41,7 +35,7 @@
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/colorAccent"
+            android:textColorHint="@color/colorBlack"
             android:textSize="20sp" />
 
         <EditText
@@ -54,54 +48,38 @@
             android:inputType="textPassword"
             android:nextFocusDown="@+id/passwordEditText"
             android:padding="10dp"
-            android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/colorAccent"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/confirmPasswordEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:hint="Confirm Password"
-            android:backgroundTint="@color/colorWhite"
-            android:inputType="textPassword"
-            android:nextFocusDown="@+id/passwordEditText"
-            android:padding="10dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@android:color/black"
-            android:textColorHint="@color/colorAccent"
+            android:textColorHint="@color/colorBlack"
             android:textSize="20sp" />
 
 
         <Button
-            android:id="@+id/createUserButton"
+            android:id="@+id/passwordLoginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Sign up"
+            android:text="Log in"
             android:background="@color/colorAccent"
             android:layout_marginTop="15dp"
             android:textColor="@color/colorWhite" />
 
         <TextView
-            android:id="@+id/loginTextView"
-            android:text="Click here if you have an Account Already?"
-            android:layout_width="match_parent"
-            android:layout_height="39dp"
-            android:gravity="center_horizontal|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/colorAccent"
-            android:textColor="@color/colorWhite" />
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="Don't have an account? Sign up here!"
+            android:id="@+id/registerTextView"
+            android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Account"
-        android:backgroundTint="@color/colorPrimary"
+        android:text="Login"
         android:textColor="@color/colorWhite"
         android:textSize="30dp"
         android:textStyle="bold"

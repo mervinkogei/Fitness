@@ -9,17 +9,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UI.CreateAccount"></activity>
-        <activity android:name=".UI.Calendar" />
-        <activity android:name=".UI.DailyTrainingActivity" />
-        <activity android:name=".UI.SettingsActivity" />
+        <activity android:name=".UI.Profile"></activity>
+        <activity
+            android:name=".UI.LoginActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".UI.CreateAccount"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".UI.Calendar"
+            android:label="Workout Calendar"
+            android:parentActivityName=".UI.MainActivity" />
+        <activity
+            android:name=".UI.DailyTrainingActivity"
+            android:label="Workout Challenge"
+            android:parentActivityName=".UI.MainActivity" />
+        <activity
+            android:name=".UI.SettingsActivity"
+            android:label="Workout Alarm"
+            android:parentActivityName=".UI.MainActivity" />
 
         <receiver android:name=".AlarmNotifictionReceiver" />
 
-        <activity android:name=".UI.MainActivity" />
-        <activity android:name=".UI.ViewExercisesActivity" />
+        <activity
+            android:name=".UI.MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".UI.ViewExercisesActivity"
+            android:label="Yoga Exercises"
+            android:parentActivityName=".UI.MainActivity" />
         <activity
             android:name=".UI.ExercisesListActivity"
+            android:label="Yoga Workout"
             android:parentActivityName=".UI.MainActivity" />
         <activity
             android:name=".UI.SplashScreen"
