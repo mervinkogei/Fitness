@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UI.Profile"></activity>
+        <activity
+            android:parentActivityName=".UI.MainActivity"
+            android:label="Account Settings"
+            android:name=".UI.Profile"></activity>
         <activity
             android:name=".UI.LoginActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />

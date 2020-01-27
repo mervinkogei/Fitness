@@ -3,6 +3,7 @@ package com.example.fitness.UI;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -98,10 +99,17 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         if (id == R.id.action_settings) {
-//            newStyle();
+            profileDetails();
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void profileDetails() {
+        FirebaseAuth.getInstance();
+        Intent intent = new Intent(MainActivity.this, Profile.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 
     private void logout() {
